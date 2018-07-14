@@ -1,0 +1,47 @@
+{
+  "planet1": {
+    "name":"Saturn",
+    "image":"./images",
+    "sound":"./sounds"
+  },
+  "planet2": {
+    "name": "Mars",
+    "image":"./images",
+    "sound": "./sounds/Jupiter"
+  },
+  "planet3": {
+    "name": "Uranus",
+    "image":"./images",
+    "sound": "./sounds"
+  },
+  "planet4": {
+    "name": "Pluto",
+    "image":"./images",
+    "sound":"./sounds"
+  },
+  "planet5": {
+    "name": "Mercury",
+    "image":"./images",
+    "soundUrl":"https://youtu.be/894Aejo-R0U"
+  },
+  "planet6": {
+    "name": "Earth",
+    "image":"./images",
+    "sound":"./sounds"
+  },
+  "planet7": {
+    "name": "Neptune",
+    "image":"./images",
+    "sound":"./sounds"
+  },
+  "planet8": {
+    "name": "Venus",
+    "image":"./images",
+    "sound":"./sounds"
+  },
+  "planet9": {
+    "name": "Sun",
+    "image":"./images",
+    "sound": "https://youtu.be/ZZQcLJjpdrI"
+  }
+}
