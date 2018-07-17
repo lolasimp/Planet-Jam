@@ -1,51 +1,51 @@
 {
-  "planet1": {
+  "planet0": {
     "name":"Saturn",
     "imgUrl":"./images/Saturn",
     "soundUrl": "./sounds/Saturn"
   },
-  "planet2": {
+  "planet1": {
     "name": "Mars",
     "imgUrl":"./images/Mars",
     "soundUrl": "./sounds/Mars"
   },
-  "planet3": {
+  "planet2": {
     "name": "Uranus",
     "imgUrl":"./images/Uranus",
     "soundUrl": "./sounds/Uranus"
   },
-  "planet4": {
+  "planet3": {
     "name": "Pluto",
     "imgUrl":"./images/Pluto",
     "soundUrl":"./sounds/Pluto"
   },
-  "planet5": {
+  "planet4": {
     "name": "Mercury",
     "imgUrl":"./images/Mercury",
     "soundUrlUrl":"./sounds/Mercury"
   },
-  "planet6": {
+  "planet5": {
     "name": "Earth",
     "imgUrl":"./images/Earth",
     "soundUrl":"./sounds/Earth"
   },
-  
-  "planet7": {
+
+  "planet6": {
     "name": "Neptune",
     "imgUrl":"./images/Neptune",
     "soundUrl":"./sounds/Neptune"
   },
-  "planet8": {
+  "planet7": {
     "name": "Venus",
     "imgUrl":"./images/Venus",
     "soundUrl":"./sounds/Venus"
   },
-  "planet11":{
+  "planet8":{
     "name": "Jupiter",
     "imgUrl":"./images/Jupiter",
     "soundUrl": "./sounds/Jupiter"
   },
-  "planet10": {
+  "planet9": {
     "name": "Sun",
     "imgUrl":"./images/Sun",
     "soundUrl": "./sounds/Sun"

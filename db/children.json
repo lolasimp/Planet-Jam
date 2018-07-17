@@ -1,22 +1,22 @@
 {
   "child0":{
     "name":"Tom",
-    "avatarUrl":".",
-    "parentUid":6638768246
+    "avatarUrl":"./avatar/boy2",
+    "parentUid":5555
   },
   "child1":{
-    "name":"Sally",
-    "avatarUrl":"",
-    "parentUid":6638768246
+    "name":"Ashley",
+    "avatarUrl":"./avatar/girl1",
+    "parentUid":6638768248
   },
   "child2":{
     "name":"Steve",
-    "avatarUrl":"",
+    "avatarUrl":"boy1",
     "parentUid":66346
   },
   "child3":{
     "name":"Bianca",
-    "avatarUrl":"",
+    "avatarUrl":"girl2",
     "parentUid":1234
   }
 }
