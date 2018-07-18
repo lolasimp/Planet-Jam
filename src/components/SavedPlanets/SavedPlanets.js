@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './SavedSounds.css';
+import './SavedPlanets.css';
 
-class SavedSounds extends React.Component {
+class SavedPlanets extends React.Component {
   render () {
     return (
-      <div className = "SavedSounds">
-        <h2>SavedSounds</h2>
+      <div className = "SavedPlanets">
+        <h2>SavedPlanets</h2>
       </div>
     );
   }
 }
 
-export default SavedSounds;
+export default SavedPlanets;
