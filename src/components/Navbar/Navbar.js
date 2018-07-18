@@ -38,6 +38,9 @@ class Navbar extends React.Component {
                     <li>
                       <Link to="/child/childId/allplanets"> All Planets</Link>
                     </li>
+                    <li>
+                      <Link to="/dashboard"> Dashboard</Link>
+                    </li>
                     <li className="navbar-form">
                       <button
                         onClick={logoutClickEvent}
