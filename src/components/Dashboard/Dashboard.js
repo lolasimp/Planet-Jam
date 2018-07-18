@@ -1,12 +1,36 @@
 import React from 'react';
+import dashboardRequests from '../../firebaseRequests/children';
 
 import './Dashboard.css';
 
 class Dashboard extends React.Component {
-  render () {
+  state = {
+    children: [],
+  }
+
+  componentDidMount() {
+    dashboardRequests
+      .getChildren()
+      .then((children) => {
+        this.setState({ children: children });
+      })
+      .catch((err) => {
+        console.error('error getting children', err);
+      })
+  }
+  render() {
+    const dashComponents = this.state.children.map((dash) => {
+      return (
+        <h2>{dash.name}</h2>
+        // <img src="{planet.imgUrl}" alt="{planet.name}"/>
+      );
+    });
     return (
-      <div className = "Dashboard">
-        <h2>Dashboard</h2>
+      <div className="Dashboard">
+        <h1>Dashboard</h1>
+        <ul className="children">
+          {dashComponents}
+        </ul>
       </div>
     );
   }

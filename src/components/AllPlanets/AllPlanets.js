@@ -22,6 +22,7 @@ class AllPlanets extends React.Component {
     const planetComponents = this.state.planets.map((planet) => {
       return (
         <h2>{planet.name}</h2>
+        // <img src="{planet.imgUrl}" alt="{planet.name}"/>
       );
     });
     return (
