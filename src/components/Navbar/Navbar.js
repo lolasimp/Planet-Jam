@@ -33,9 +33,6 @@ class Navbar extends React.Component {
                 authed ? (
                   <ul className="nav navbar-nav navbar-right">
                     <li>
-                      <Link to="/child/childId/savedPlanets"> Favorite Planets</Link>
-                    </li>
-                    <li>
                       <Link to="/child/childId/allplanets"> All Planets</Link>
                     </li>
                     <li>
