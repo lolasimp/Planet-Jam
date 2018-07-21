@@ -1,10 +1,10 @@
 import axios from 'axios';
 import constants from '../constants';
 
-const getSavedPlanets = (ParentUid) => {
+const getSavedPlanets = (uid) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${constants.firebaseConfig.databaseURL}/savedPlanets.json?orderBy="uid"&equalTo="${ParentUid}"`)
+      .get(`${constants.firebaseConfig.databaseURL}/savedPlanets.json?orderBy="uid"&equalTo="${uid}"`)
       .then(res => {
         const planet = [];
         if (res.data !== null) {
@@ -21,17 +21,17 @@ const getSavedPlanets = (ParentUid) => {
   });
 };
 
-const postSavedPlanets = (savedPlanet) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .post(`${constants.firebaseConfig.databaseURL}/savedPlanets.json`, savedPlanet)
-      .then((res) => {
-        resolve(res);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
-};
+// const postSavedPlanets = (savedPlanet) => {
+//   return new Promise((resolve, reject) => {
+//     axios
+//       .post(`${constants.firebaseConfig.databaseURL}/savedPlanets.json`, savedPlanet)
+//       .then((res) => {
+//         resolve(res);
+//       })
+//       .catch((err) => {
+//         reject(err);
+//       });
+//   });
+// };
 
-export default {getSavedPlanets, postSavedPlanets};
+export default {getSavedPlanets};
