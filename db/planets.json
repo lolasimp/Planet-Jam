@@ -22,7 +22,7 @@
   "planet4": {
     "name": "Mercury",
     "imgUrl":"./images/Mercury",
-    "soundUrlUrl":"./sounds/Mercury"
+    "soundUrl":"./sounds/Mercury"
   },
   "planet5": {
     "name": "Earth",

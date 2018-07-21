@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
     const dashComponents = this.state.children.map((dash) => {
       return (
         <h2>{dash.name}</h2>
-        // <img src="{planet.imgUrl}" alt="{planet.name}"/>
+      
       );
     });
     return (

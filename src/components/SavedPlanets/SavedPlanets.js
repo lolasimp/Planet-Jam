@@ -36,9 +36,9 @@ class SavedPlanets extends React.Component {
           {planetId.map(this.renderPlanet)}
           {
             planetsIsHere ? (
-              <button className="btn btn-default" onClick={this.saveOrder}>Save Planet</button>
+              <button className="btn btn-default" onClick={this.savePlanet}>Save Planet</button>
             ) : (
-                <div>Add inventory to your orders</div>
+                <div>Add Planets</div>
               )
           }
         </ul>
