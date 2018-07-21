@@ -24,10 +24,12 @@ class AllPlanets extends React.Component {
     // const details = this.props
     const planetComponents = this.state.planets.map((planet) => {
       const imagePath = require(`${planet.imgUrl}.png`);
+      // const planetSounds = require(`${planet.soundUrl}.mp3`);
       return (
-        <div>
-          <h2>{planet.name}</h2>
-          <img src={imagePath} alt={planet.name}/>
+        <div className="planet-container col-xs-4">
+          <h2 className="planetName">{planet.name}</h2>
+          <img className="planet-pic" src={imagePath} alt={planet.name}/>
+        <button className="btn btn-success">Save</button>
         </div>
       );
     });

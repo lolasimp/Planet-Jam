@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './ChildProfile.css';
 
 class ChildProfile extends React.Component {

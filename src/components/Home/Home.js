@@ -6,7 +6,7 @@ class Home extends React.Component {
   render () {
     return (
       <div className = "Home">
-        <h2>Home</h2>
+        <h2 className="title">Planet Jam</h2>
       </div>
     );
   }

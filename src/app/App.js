@@ -109,7 +109,7 @@ class App extends Component {
                     component={New}
                   />
                   <PrivateRoute
-                    path="/edit/child/childId"
+                    path="/child/childId/edit"
                     authed={this.state.authed}
                     component={Edit}
                   />
