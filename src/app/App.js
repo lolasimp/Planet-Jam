@@ -17,6 +17,7 @@ import SavedPlanets from '../components/SavedPlanets/SavedPlanets';
 import Edit from '../components/ChildProfile/ChildProfile';
 
 import fbConnection from '../firebaseRequests/connection';
+// import ChildProfile from '../components/ChildProfile/ChildProfile';
 fbConnection();
 
 const PrivateRoute = ({ component: Component, authed, ...rest}) => {
@@ -109,7 +110,7 @@ class App extends Component {
                     component={New}
                   />
                   <PrivateRoute
-                    path="/edit/child/childId"
+                    path="/child/childId/edit"
                     authed={this.state.authed}
                     component={Edit}
                   />

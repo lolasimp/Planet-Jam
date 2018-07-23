@@ -1,7 +1,7 @@
 import axios from 'axios';
 import constants from '../constants';
 
-const getSavedPlanets = () => {
+const getSavedPlanets = (uid) => {
   return new Promise((resolve, reject) => {
     axios
       .get(`${constants.firebaseConfig.databaseURL}/savedPlanets.json?orderBy="uid"&equalTo="${uid}"`)
@@ -20,5 +20,18 @@ const getSavedPlanets = () => {
       });
   });
 };
+
+// const postSavedPlanets = (savedPlanet) => {
+//   return new Promise((resolve, reject) => {
+//     axios
+//       .post(`${constants.firebaseConfig.databaseURL}/savedPlanets.json`, savedPlanet)
+//       .then((res) => {
+//         resolve(res);
+//       })
+//       .catch((err) => {
+//         reject(err);
+//       });
+//   });
+// };
 
 export default {getSavedPlanets};

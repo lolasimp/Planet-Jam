@@ -1,21 +1,17 @@
 {
   "savedPlanet0": {
-    "uid":6638768248,
     "childId":"child1",
     "planetId": "planet1"
   },
   "savedPlanet6": {
-    "uid":1234,
     "childId":"child3",
     "planetId": "planet1"
   },
   "savedPlanet9": {
-    "uid":66346,
     "childId":"child2",
     "planetId": "planet1"
   },
   "savedPlanet3": {
-    "uid":5555,
     "childId":"child0",
     "planetId": "planet1"
   }
