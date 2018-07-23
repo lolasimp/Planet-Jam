@@ -28,8 +28,10 @@ class AllPlanets extends React.Component {
       return (
         <div className="planet-container col-xs-4">
           <h2 className="planetName">{planet.name}</h2>
-          <img className="planet-pic" src={imagePath} alt={planet.name}/>
-        <button className="btn btn-success">Save</button>
+          <a href="">
+            <img className="planet-pic" src={imagePath} alt={planet.name} onClick="saveNewPlanet"/>
+          </a>
+        {/* <button className="btn btn-success">Save</button> */}
         </div>
       );
     });
