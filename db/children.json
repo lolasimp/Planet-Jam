@@ -1,7 +1,7 @@
 {
   "child0":{
     "name":"Tom",
-    "avatarUrl":"./avatar/boy2",
+    "avatarUrl":".avatar/",
     "parentUid":5555
   },
   "child1":{
