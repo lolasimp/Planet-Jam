@@ -8,7 +8,10 @@ class Dashboard extends React.Component {
     render() {
       return (
        <div>
-         <button><Link to="/new/child">Go To New</Link></button>
+         <button><Link to="/new/child">Create New Child Profile</Link></button>
+         <div>
+           {/* {newChild.this.props} */}
+         </div>
        </div>
       );
     }
