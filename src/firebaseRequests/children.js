@@ -1,7 +1,9 @@
 import axios from 'axios';
 import constants from '../constants';
+import firebase from 'firebase';
 
-const getChildren = (parentUid) => {
+const getChildren = () => {
+  const parentUid = firebase.auth().currentUser.uid;
   return new Promise((resolve, reject) => {
     axios
       .get(`${constants.firebaseConfig.databaseURL}/children.json?orderBy="parentUid"&equalTo="${parentUid}"`)
@@ -34,6 +36,19 @@ const postChild = (newChild) => {
   });
 };
 
+const deleteRequest = (childrenId) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .delete(`${constants.firebaseConfig.databaseURL}/children/${childrenId}.json`)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
 // const getSavedChildren = (childId) => {
 //   return new Promise((resolve, reject) => {
 //     axios
@@ -54,4 +69,4 @@ const postChild = (newChild) => {
 //   });
 // };
 
-export default {getChildren, postChild};
+export default { getChildren, postChild, deleteRequest };

@@ -22,12 +22,30 @@ class Dashboard extends React.Component {
         console.error('error with getting my children', err);
       });
   }
+
+
+  deleteChildClick = (id) => {
+    childRequest
+      .deleteRequest(id)
+      .then(() => {
+        childRequest
+          .getChildren()
+          .then((children) => {
+            this.setState({ children });
+          })
+      })
+      .catch(((err) => {
+        console.error('error with get delete request', err);
+      }));
+  }
+
   render() {
     const dashComponents = this.state.children.map((child) => {
       return (
         <ChildProfile
           key={child.id}
           details={child}
+          onClick={this.deleteChildClick}
         />
       );
     });
