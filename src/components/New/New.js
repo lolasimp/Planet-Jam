@@ -54,7 +54,6 @@ class New extends React.Component {
           <img src={girl2} alt="" />
           <button className="saveMe btn btn-success " onClick={this.postChild}>Save</button>
         </div>
-
     );
   }
 }
