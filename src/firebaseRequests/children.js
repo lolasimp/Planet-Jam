@@ -49,24 +49,17 @@ const deleteRequest = (childrenId) => {
   });
 };
 
-// const getSavedChildren = (childId) => {
-//   return new Promise((resolve, reject) => {
-//     axios
-//       .get(`${constants.firebaseConfig.databaseURL}/children/${childId}.json`)
-//       .then(res => {
-//         const children = [];
-//         if (res.data !== null) {
-//           Object.keys(res.data).forEach(fbKey => {
-//             res.data[fbKey].id = fbKey;
-//             children.push(res.data[fbKey]);
-//           });
-//         }
-//         resolve(children);
-//       })
-//       .catch(err => {
-//         reject(err);
-//       });
-//   });
-// };
+const updateChild = (childId, children) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/children/${childId}.json`, children)
+      .then(res => {
+       resolve(res);
+      })
+      .catch((error)=> {
+        reject(error.message);
+      });
+  });
+};
 
-export default { getChildren, postChild, deleteRequest };
+export default { getChildren, postChild, deleteRequest, updateChild };

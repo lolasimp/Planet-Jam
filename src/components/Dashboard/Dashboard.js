@@ -4,6 +4,8 @@ import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
 import childRequest from '../../firebaseRequests/children';
 
+import auth from '../../firebaseRequests/auth';
+
 import './Dashboard.css';
 
 
@@ -24,9 +26,10 @@ class Dashboard extends React.Component {
   }
 
 
-  deleteChildClick = (id) => {
+  deleteChildClick = (e) => {
+    const childId = e.target.id;
     childRequest
-      .deleteRequest(id)
+      .deleteRequest(childId)
       .then(() => {
         childRequest
           .getChildren()
@@ -39,13 +42,41 @@ class Dashboard extends React.Component {
       }));
   }
 
+ getStringInit = () => {
+   return {input: ''};
+ }
+
+childInputNameChange = (e) => {
+  this.setState({input: e.target.value});
+}
+
+updateCurrentChild = (e) => {
+  const firebaseId = e.target.id;
+  const updatedChild = {
+    name: this.state.input,
+    avatarUrl: e.target.avatarUrl,
+    parentUid: auth.getUid(),
+  }
+  console.log(updatedChild);
+  childRequest
+    .updateChild(firebaseId, updatedChild)
+    .then(() => {
+      console.log('success');
+    })
+    .catch((err) => {
+      console.error('error not updating', err);
+    })
+}
+
   render() {
     const dashComponents = this.state.children.map((child) => {
       return (
         <ChildProfile
           key={child.id}
           details={child}
-          onClick={this.deleteChildClick}
+          deleteChild={this.deleteChildClick}
+          onChange={this.childInputNameChange}
+          updateCurrentChild={this.updateCurrentChild}
         />
       );
     });

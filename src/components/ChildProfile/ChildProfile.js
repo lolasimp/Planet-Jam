@@ -8,9 +8,16 @@ import './ChildProfile.css';
 
 class ChildProfile extends React.Component {
 
-  deleteChildEvent = (id) =>{
-    this.props.onClick(id);
+  // deleteChildEvent = (id) =>{
+  //   this.props.deleteChild(id);
+  // }
+
+  childInputNameChangeEvent = (e, id) => {
+    this.props.onChange(e, id);
   }
+  // updateCurrentChildEvent = (details) => {
+  //   this.props.onSave(details);
+  // }
 
   render() {
     const details = this.props.details;
@@ -19,8 +26,13 @@ class ChildProfile extends React.Component {
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
-          <img className="child-pic" src={imagePath} alt={details.avatarUrl.jpeg} />
-        <button className="btn btn-danger" onClick={() => this.deleteChildEvent(details.id)}>Delete</button>
+        <div className="child-edit">
+        <input type="text" placeholder="Edit" onChange={(event) => this.childInputNameChangeEvent(event, details.id)}/>
+        <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Update</button>
+        </div>
+          <img className="child-pic" src={imagePath} alt={details.avatarUrl} />
+        <button className="btn btn-danger" id={details.id} onClick={this.props.deleteChild}>Delete</button>
+
       </div>
       </li>
     );
