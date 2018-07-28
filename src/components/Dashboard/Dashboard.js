@@ -4,8 +4,6 @@ import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
 import childRequest from '../../firebaseRequests/children';
 
-// import auth from '../../firebaseRequests/auth';
-
 import './Dashboard.css';
 
 

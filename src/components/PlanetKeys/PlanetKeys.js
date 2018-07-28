@@ -10,7 +10,6 @@ class PlanetKeys extends React.Component {
 
   saveNewPlanetEvent = () => {
     this.props.addToMyPlanets(this.props.details);
-    console.log('what do I',this.props.details);
   }
 
   render() {
