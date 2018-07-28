@@ -35,7 +35,7 @@ class PlanetKeys extends React.Component {
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
-       <img src={imagePath} alt=""/>
+       <img className="planet-pic"src={imagePath} alt=""/>
       </div>
       </li>
     );
