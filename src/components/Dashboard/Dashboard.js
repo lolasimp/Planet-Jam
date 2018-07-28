@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
@@ -42,42 +42,48 @@ class Dashboard extends React.Component {
       }));
   }
 
- getStringInit = () => {
-   return {input: ''};
- }
-
-childInputNameChange = (e) => {
-  this.setState({input: e.target.value});
-}
-
-updateCurrentChild = (e) => {
-  const firebaseId = e.target.id;
-  const updatedChild = {
-    name: this.state.input,
-    avatarUrl: e.target.value.avatarUrl,
-    parentUid: auth.getUid(),
+  getStringInit = () => {
+    return { input: '' };
   }
-  childRequest
-    .updateChild(firebaseId, updatedChild)
-    .then(() => {
-    })
-    .catch((err) => {
-      console.error('error not updating', err);
-    })
-}
+
+  childInputNameChange = (e) => {
+    this.setState({ input: e.target.value });
+  }
+
+  updateCurrentChild = (e) => {
+    const firebaseId = e.target.id;
+    const updatedChild = {
+      name: this.state.input,
+      avatarUrl: e.target.value.avatarUrl,
+      parentUid: auth.getUid(),
+    }
+    childRequest
+      .updateChild(firebaseId, updatedChild)
+      .then(() => {
+        const id = firebase.auth().currentUser.uid;
+        childRequest
+          .getChildren(id)
+          .then((children) => {
+            this.setState({ children });
+          })
+      })
+      .catch((err) => {
+        console.error('error not updating', err);
+      })
+  }
 
   render() {
     const dashComponents = this.state.children.map((child) => {
       return (
         <Fragment key={child.id}>
 
-        <ChildProfile
-          id={child.id}
-          details={child}
-          deleteChild={this.deleteChildClick}
-          onChange={this.childInputNameChange}
-          updateCurrentChild={this.updateCurrentChild}
-        />
+          <ChildProfile
+            id={child.id}
+            details={child}
+            deleteChild={this.deleteChildClick}
+            onChange={this.childInputNameChange}
+            updateCurrentChild={this.updateCurrentChild}
+          />
         </Fragment>
       );
     });
