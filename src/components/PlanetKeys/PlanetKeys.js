@@ -30,7 +30,7 @@ class PlanetKeys extends React.Component {
 
   render() {
     const details = this.props.details;
-    const imagePath = details.imageUrl;
+    const imagePath = require(`./images/${details.imgUrl}`);
     return (
       <li>
       <div className="planet-container col-xs-4">

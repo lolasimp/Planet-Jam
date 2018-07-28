@@ -120,7 +120,7 @@ class App extends Component {
                     component={AllPlanets}
                   />
                    <PrivateRoute
-                    exact path="/child/childId/savedPlanets/:id"
+                    exact path="/child/:childId/savedPlanets"
                     authed={this.state.authed}
                     component={SavedPlanets}
                   />

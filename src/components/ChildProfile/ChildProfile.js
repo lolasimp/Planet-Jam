@@ -27,7 +27,7 @@ class ChildProfile extends React.Component {
         <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Update</button>
         </div>
           <Link to=
-          {`/child/childId/savedPlanets/${this.props.id}`}><img className="child-pic" src={imagePath} alt={details.avatarUrl} /></Link>
+          {`/child/${this.props.id}/savedPlanets`}><img className="child-pic" src={imagePath} alt={details.avatarUrl} /></Link>
         <button className="btn btn-danger" id={details.id} onClick={this.props.deleteChild}>Delete</button>
 
       </div>
