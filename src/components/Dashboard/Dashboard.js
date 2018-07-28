@@ -4,7 +4,7 @@ import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
 import childRequest from '../../firebaseRequests/children';
 
-import auth from '../../firebaseRequests/auth';
+// import auth from '../../firebaseRequests/auth';
 
 import './Dashboard.css';
 
@@ -51,14 +51,13 @@ class Dashboard extends React.Component {
   }
 
   updateCurrentChild = (e) => {
-    const firebaseId = e.target.id;
-    const updatedChild = {
-      name: this.state.input,
-      avatarUrl: e.target.value.avatarUrl,
-      parentUid: auth.getUid(),
-    }
+    const allChildren = [...this.state.children];
+    const childId = e.target.id;
+    const selectedChild = allChildren.find(x => x.id === childId);
+    delete selectedChild.id;
+    selectedChild.name = this.state.input;
     childRequest
-      .updateChild(firebaseId, updatedChild)
+      .updateChild(childId, selectedChild)
       .then(() => {
         const id = firebase.auth().currentUser.uid;
         childRequest
