@@ -36,6 +36,19 @@ const postChild = (newChild) => {
   });
 };
 
+const updateChild = (childId, updatedChild) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/children/${childId}.json`, updatedChild)
+      .then(res => {
+       resolve(res);
+      })
+      .catch((error)=> {
+        reject(error.message);
+      });
+  });
+};
+
 const deleteRequest = (childrenId) => {
   return new Promise((resolve, reject) => {
     axios
@@ -49,17 +62,19 @@ const deleteRequest = (childrenId) => {
   });
 };
 
-const updateChild = (childId, children) => {
-  return new Promise((resolve, reject) => {
-    axios
-      .put(`${constants.firebaseConfig.databaseURL}/children/${childId}.json`, children)
-      .then(res => {
-       resolve(res);
-      })
-      .catch((error)=> {
-        reject(error.message);
-      });
-  });
-};
 
-export default { getChildren, postChild, deleteRequest, updateChild };
+
+// const getSingleChildPlanets = (childId) => {
+//   return new Promise((resolve, reject) => {
+//     axios
+//       .get(`${constants.firebaseConfig.databaseURL}/children.json?orderBy="parentUid"&equalTo="${parentUid}"`)
+//       .then(res => {
+
+//       })
+//       .catch(err => {
+//         reject(err);
+//       });
+//   });
+// };
+
+export default { getChildren, postChild, deleteRequest, updateChild};

@@ -119,11 +119,16 @@ class App extends Component {
                     authed={this.state.authed}
                     component={AllPlanets}
                   />
-                  <PrivateRoute
-                    path="/child/childId/savedPlanets"
+                   <PrivateRoute
+                    exact path="/child/childId/savedPlanets/:id"
                     authed={this.state.authed}
                     component={SavedPlanets}
                   />
+                  {/* <PrivateRoute
+                    path="/child/childId/savedPlanets"
+                    authed={this.state.authed}
+                    component={SavedPlanets}
+                  /> */}
                 </Switch>
               </div>
             </div>

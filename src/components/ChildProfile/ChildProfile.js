@@ -1,27 +1,23 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import childRequest from '../../firebaseRequests/children';
 // import firebase from 'firebase';
 // import myPlanet from '../../firebaseRequests/savedPlanets';
+
 
 import './ChildProfile.css';
 
 class ChildProfile extends React.Component {
 
-  // deleteChildEvent = (id) =>{
-  //   this.props.deleteChild(id);
-  // }
 
   childInputNameChangeEvent = (e, id) => {
+    e.preventDefault();
     this.props.onChange(e, id);
   }
-  // updateCurrentChildEvent = (details) => {
-  //   this.props.onSave(details);
-  // }
 
   render() {
     const details = this.props.details;
-    const imagePath = details.avatarUrl;
+    const imagePath = details.imageUrl;
     return (
       <li>
       <div className="planet-container col-xs-4">
@@ -30,7 +26,8 @@ class ChildProfile extends React.Component {
         <input type="text" placeholder="Edit" onChange={(event) => this.childInputNameChangeEvent(event, details.id)}/>
         <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Update</button>
         </div>
-          <img className="child-pic" src={imagePath} alt={details.avatarUrl} />
+          <Link to=
+          {`/child/childId/savedPlanets/${this.props.id}`}><img className="child-pic" src={imagePath} alt={details.avatarUrl} /></Link>
         <button className="btn btn-danger" id={details.id} onClick={this.props.deleteChild}>Delete</button>
 
       </div>

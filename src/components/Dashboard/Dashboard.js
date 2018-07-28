@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
@@ -54,14 +54,12 @@ updateCurrentChild = (e) => {
   const firebaseId = e.target.id;
   const updatedChild = {
     name: this.state.input,
-    avatarUrl: e.target.avatarUrl,
+    avatarUrl: e.target.value.avatarUrl,
     parentUid: auth.getUid(),
   }
-  console.log(updatedChild);
   childRequest
     .updateChild(firebaseId, updatedChild)
     .then(() => {
-      console.log('success');
     })
     .catch((err) => {
       console.error('error not updating', err);
@@ -71,13 +69,16 @@ updateCurrentChild = (e) => {
   render() {
     const dashComponents = this.state.children.map((child) => {
       return (
+        <Fragment key={child.id}>
+
         <ChildProfile
-          key={child.id}
+          id={child.id}
           details={child}
           deleteChild={this.deleteChildClick}
           onChange={this.childInputNameChange}
           updateCurrentChild={this.updateCurrentChild}
         />
+        </Fragment>
       );
     });
     return (
