@@ -1,12 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import childRequest from '../../firebaseRequests/children';
-// import firebase from 'firebase';
-// import myPlanet from '../../firebaseRequests/savedPlanets';
-
-import authRequest from '../../firebaseRequests/auth';
-import planetRequests from '../../firebaseRequests/planets'
-
 
 import './PlanetKeys.css';
 
@@ -17,25 +9,19 @@ class PlanetKeys extends React.Component {
 
 
   saveNewPlanetEvent = () => {
-        const newPlanet = {...this.state.newPlanet};
-        newPlanet.childId = authRequest.getUid();
-        planetRequests.postChild( newPlanet)
-        .then(()=> {
-          this.props.history.push("/child/childId/savedPlanets/:id");
-        })
-        .catch ((err) =>{
-          console.error('no new planet', err);
-        })
-      }
+    this.props.addToMyPlanets(this.props.details);
+    console.log('what do I',this.props.details);
+  }
 
   render() {
-    const details = this.props.details;
+    const {details} = this.props;
     const imagePath = require(`./images/${details.imgUrl}`);
     return (
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
        <img className="planet-pic"src={imagePath} alt=""/>
+       <button className="btn btn-success" onClick={this.saveNewPlanetEvent}>Save My Planet</button>
       </div>
       </li>
     );
