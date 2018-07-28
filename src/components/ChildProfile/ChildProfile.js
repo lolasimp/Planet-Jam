@@ -1,50 +1,40 @@
 import React from 'react';
-import childrenRequests from '../../firebaseRequests/children';
+import { Link } from 'react-router-dom';
+// import childRequest from '../../firebaseRequests/children';
+// import firebase from 'firebase';
 // import myPlanet from '../../firebaseRequests/savedPlanets';
+
 
 import './ChildProfile.css';
 
 class ChildProfile extends React.Component {
-  state = {
-    children: [],
-  }
 
-  componentDidMount() {
-    childrenRequests
-      .getChildren()
-      .then((children) => {
-        this.setState({ children: children });
-      })
-      .catch((err) => {
-        console.error('error getting children', err);
-      });
+
+  childInputNameChangeEvent = (e, id) => {
+    e.preventDefault();
+    this.props.onChange(e, id);
   }
 
   render() {
-    // const details = this.props
-    const childComponents = this.state.children.map((children) => {
-      console.error('component', children);
-      const imagePath = require(`${children.avatarUrl}`);
-      // const planetSounds = require(`${planet.soundUrl}.mp3`);
-      return (
-        <div className="planet-container col-xs-4">
-          <h2 className="planetName">{children.name}</h2>
-          <a href="">
-            <img className="child-pic" src={imagePath} alt={children.avatarUrl}/>
-          </a>
-        <button className="btn btn-success onClick">Save</button>
-        </div>
-      );
-    });
+    const details = this.props.details;
+    const imagePath = require(`./avatar/${details.avatarUrl}`);
     return (
-      <div className="AllChildren col-xs-12">
-        <h1>All Planets</h1>
-        <ul className="children">
-          {childComponents}
-        </ul>
+      <li>
+      <div className="planet-container col-xs-4">
+        <h2 className="planetName">{details.name}</h2>
+        <div className="child-edit">
+        <input type="text" placeholder="Edit" onChange={(event) => this.childInputNameChangeEvent(event, details.id)}/>
+        <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Update</button>
+        </div>
+          <Link to=
+          {`/child/${this.props.id}/savedPlanets`}><img className="child-pic" src={imagePath} alt={details.avatarUrl} /></Link>
+        <button className="btn btn-danger" id={details.id} onClick={this.props.deleteChild}>Delete</button>
+
       </div>
+      </li>
     );
-  }
+  };
 }
+
 
 export default ChildProfile;

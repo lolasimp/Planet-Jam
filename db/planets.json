@@ -1,53 +1,53 @@
 {
   "planet0": {
     "name":"Saturn",
-    "imgUrl":"./images/Saturn",
-    "soundUrl": "./sounds/Saturn"
+    "imgUrl":"Saturn.png",
+    "soundUrl": "Saturn.mp3"
   },
   "planet1": {
     "name": "Mars",
-    "imgUrl":"./images/Mars",
-    "soundUrl": "./sounds/Mars"
+    "imgUrl":"Mars.png",
+    "soundUrl": "Mars.mp3"
   },
   "planet2": {
     "name": "Uranus",
-    "imgUrl":"./images/Uranus",
-    "soundUrl": "./sounds/Uranus"
+    "imgUrl":"Uranus.png",
+    "soundUrl": "Uranus.mp3"
   },
   "planet3": {
     "name": "Pluto",
-    "imgUrl":"./images/Pluto",
-    "soundUrl":"./sounds/Pluto"
+    "imgUrl":"Pluto.png",
+    "soundUrl":"Pluto.mp3"
   },
   "planet4": {
     "name": "Mercury",
-    "imgUrl":"./images/Mercury",
-    "soundUrl":"./sounds/Mercury"
+    "imgUrl":"Mercury.png",
+    "soundUrl":"Mercury.mp3"
   },
   "planet5": {
     "name": "Earth",
-    "imgUrl":"./images/Earth",
-    "soundUrl":"./sounds/Earth"
+    "imgUrl":"Earth.png",
+    "soundUrl":"Earth.mp3"
   },
 
   "planet6": {
     "name": "Neptune",
-    "imgUrl":"./images/Neptune",
-    "soundUrl":"./sounds/Neptune"
+    "imgUrl":"Neptune.png",
+    "soundUrl":"Neptune.mp3"
   },
   "planet7": {
     "name": "Venus",
-    "imgUrl":"./images/Venus",
-    "soundUrl":"./sounds/Venus"
+    "imgUrl":"Venus.png",
+    "soundUrl":"Venus.mp3"
   },
   "planet8":{
     "name": "Jupiter",
-    "imgUrl":"./images/Jupiter",
-    "soundUrl": "./sounds/Jupiter"
+    "imgUrl":"Jupiter.png",
+    "soundUrl": "Jupiter.mp3"
   },
   "planet9": {
     "name": "Sun",
-    "imgUrl":"./images/Sun",
-    "soundUrl": "./sounds/Sun"
+    "imgUrl":"Sun.png",
+    "soundUrl": "Sun.mp3"
   }
 }

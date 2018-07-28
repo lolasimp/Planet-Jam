@@ -1,7 +1,9 @@
 import axios from 'axios';
 import constants from '../constants';
+import firebase from 'firebase';
 
-const getChildren = (parentUid) => {
+const getChildren = () => {
+  const parentUid = firebase.auth().currentUser.uid;
   return new Promise((resolve, reject) => {
     axios
       .get(`${constants.firebaseConfig.databaseURL}/children.json?orderBy="parentUid"&equalTo="${parentUid}"`)
@@ -34,4 +36,45 @@ const postChild = (newChild) => {
   });
 };
 
-export default {getChildren, postChild};
+const updateChild = (childId, updatedChild) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .put(`${constants.firebaseConfig.databaseURL}/children/${childId}.json`, updatedChild)
+      .then(res => {
+       resolve(res);
+      })
+      .catch((error)=> {
+        reject(error.message);
+      });
+  });
+};
+
+const deleteRequest = (childrenId) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .delete(`${constants.firebaseConfig.databaseURL}/children/${childrenId}.json`)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+
+
+// const getSingleChildPlanets = (childId) => {
+//   return new Promise((resolve, reject) => {
+//     axios
+//       .get(`${constants.firebaseConfig.databaseURL}/children.json?orderBy="parentUid"&equalTo="${parentUid}"`)
+//       .then(res => {
+
+//       })
+//       .catch(err => {
+//         reject(err);
+//       });
+//   });
+// };
+
+export default { getChildren, postChild, deleteRequest, updateChild};
