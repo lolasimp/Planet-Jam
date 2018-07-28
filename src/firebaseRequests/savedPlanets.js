@@ -35,4 +35,17 @@ const postSavedPlanets = (savedPlanet) => {
   });
 };
 
-export default {getSavedPlanets, postSavedPlanets};
+const deletePlanet = (planetId) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .delete(`${constants.firebaseConfig.databaseURL}/savedPlanets/${planetId}.json`)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+};
+
+export default {getSavedPlanets, postSavedPlanets, deletePlanet};

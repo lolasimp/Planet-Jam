@@ -62,19 +62,4 @@ const deleteRequest = (childrenId) => {
   });
 };
 
-
-
-// const getSingleChildPlanets = (childId) => {
-//   return new Promise((resolve, reject) => {
-//     axios
-//       .get(`${constants.firebaseConfig.databaseURL}/children.json?orderBy="parentUid"&equalTo="${parentUid}"`)
-//       .then(res => {
-
-//       })
-//       .catch(err => {
-//         reject(err);
-//       });
-//   });
-// };
-
 export default { getChildren, postChild, deleteRequest, updateChild};
