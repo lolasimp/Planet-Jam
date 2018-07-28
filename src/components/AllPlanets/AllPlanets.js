@@ -1,11 +1,8 @@
 import React,{Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import PlanetKeys from '../../components/PlanetKeys/PlanetKeys';
-// import Saved from '../../'
-// import firebase from 'firebase';
+import savedPlanetRequest from '../../firebaseRequests/savedPlanets';
 import planetRequest from '../../firebaseRequests/planets';
-
-// import auth from '../../firebaseRequests/auth';
 
 import './AllPlanets.css';
 
@@ -13,18 +10,23 @@ import './AllPlanets.css';
 class AllPlanets extends React.Component {
   state = {
     planets: [],
-    myplanets: {},
+    myplanet: {},
   }
 
-  addToMyPlanets = (key) => {
-    const newFav = {...this.state.myplanets};
-    newFav[key] = newFav[key] + 1 || 1;
-    this.setState({ myplanets: newFav });
+  addToMyPlanets = (planetDetails) => {
+    const newFav = {...this.state.myplanet};
+    newFav.childId= this.props.match.params.childId;
+    newFav.planetId= planetDetails.id;
+    this.setState({ myplanet: newFav });
+    savedPlanetRequest
+    .postSavedPlanets(newFav)
+    .then(() => {
+    })
+    .catch((err) => {
+      console.error('not saving', err);
+    })
   }
 
-  // saveNewOrder = () => {
-  //   console.error('planet to save', this.state.myplanets);
-  // }
 
 
   componentDidMount() {

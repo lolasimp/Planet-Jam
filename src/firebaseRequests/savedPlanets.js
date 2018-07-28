@@ -7,7 +7,14 @@ const getSavedPlanets = (childId) => {
     axios
       .get(`${constants.firebaseConfig.databaseURL}/savedPlanets.json?orderBy="childId"&equalTo="${childId}"`)
       .then(res => {
-        resolve(res.data);
+        const planets = [];
+        if (res.data !== null) {
+          Object.keys(res.data).forEach(fbKey => {
+            res.data[fbKey].id = fbKey;
+            planets.push(res.data[fbKey]);
+          });
+        }
+        resolve(planets);
       })
       .catch(err => {
         reject(err);
