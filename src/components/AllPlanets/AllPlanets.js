@@ -56,7 +56,7 @@ class AllPlanets extends React.Component {
         <ul>
           {allPlanetComponents}
         </ul>
-        <button><Link to="/child/childId/savedPlanets/:id">See All Saved Planets</Link></button>
+        <button><Link to={`/child/childId/savedPlanets`}>See All Saved Planets</Link></button>
       </div>
     );
   }
