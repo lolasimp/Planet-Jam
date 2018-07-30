@@ -5,7 +5,7 @@ import './PlanetKeys.css';
 class PlanetKeys extends React.Component {
 
   state = {
-    isPlayed: true,
+    isPlayed:false,
   }
   saveOrder= () => {
     this.props.saveNewOrder();
@@ -16,23 +16,18 @@ class PlanetKeys extends React.Component {
     this.props.addToMyPlanets(this.props.details);
   }
 
-  // playSoundEvent = (e) => {
-  //   document.querySelector(`audio.${e.target.id}`).play();
-
-  //   console.error(document.querySelector(`audio.${e.target.id}`));
-  // }
-
-
-
   playSoundEvent = (e) => {
-    console.log(e);
-    if(this.state.isPlayed){
+    if(this.state.isPlayed === false){
     document.querySelector(`audio.${e.target.id}`).play();
+    this.setState({isPlayed: true})
     }else {
+      this.setState({isPlayed: false})
     document.querySelector(`audio.${e.target.id}`).pause();
     }
     console.error(document.querySelector(`audio.${e.target.id}`));
     }
+
+
 
   render() {
     const {details} = this.props;
