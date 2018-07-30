@@ -9,6 +9,7 @@ class SavedPlanets extends React.Component {
   state = {
     savedPlanets: [],
     planets: [],
+    isPlayed: true,
   }
 
   componentDidMount() {
@@ -46,6 +47,17 @@ class SavedPlanets extends React.Component {
       }));
   }
 
+  playSavedSoundEvent = (e, id) => {
+    // if(this.state.isPlayed){
+      document.querySelector(`audio.${e}`).play();
+    // }
+    console.error(e.target.id);
+      // }else {
+      // document.querySelector(`audio.${.id}`).pause();
+      // }
+      // console.error(document.querySelector(`audio.${selectedPlanet.id}`));
+  }
+
   render() {
     const childId = this.props.match.params.childId;
     const { savedPlanets, planets } = this.state;
@@ -53,13 +65,17 @@ class SavedPlanets extends React.Component {
       const selectedPlanet = planets.find(x => x.id === savedPlanet.planetId);
       if (selectedPlanet) {
         const savedImagePath = require(`../../assets/images/${selectedPlanet.imgUrl}`);
-        // const planetSounds = require(`./PlanetKeys/sounds/${selectedPlanet.soundUrl}`);
+        const planetSounds = require(`../../assets/sounds/${selectedPlanet.soundUrl}`);
+        // const sounds = require(`./sounds/${selectedPlanet.soundUrl}`);
         return (
           <div className="planet-container col-xs-4" key={savedPlanet.id}>
             <h2 className="planetName">{selectedPlanet.name}</h2>
-            <a href="">
-              <img className="planet-pic" src={savedImagePath} alt={selectedPlanet.name} />
-            </a>
+            <img className="planet-pic" src={savedImagePath} alt={selectedPlanet.name} onClick={this.playSavedSoundEvent} id={savedPlanet.id}/>
+       <audio className={selectedPlanet.id}>
+       <source src={planetSounds}/>
+       </audio>
+              {/* <img className="planet-pic" src={savedImagePath} alt={selectedPlanet.name} /> */}
+
             <button className="btn btn-danger" id={savedPlanet.id} onClick={this.deletePlanetClick}>Delete Me</button>
           </div>
         );
