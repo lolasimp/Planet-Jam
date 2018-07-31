@@ -4,10 +4,10 @@ import authRequest from '../../firebaseRequests/auth';
 import childrenRequest from '../../firebaseRequests/children';
 
 import './New.css';
-import boy1 from './avatar/boy1.jpeg';
-import boy2 from './avatar/boy2.jpeg';
-import girl1 from './avatar/girl1.jpeg';
-import girl2 from './avatar/girl2.jpg';
+import boy1 from '../../assets/avatar/boy1.jpeg';
+import boy2 from '../../assets/avatar/boy2.jpeg';
+import girl1 from '../../assets/avatar/girl1.jpeg';
+import girl2 from '../../assets/avatar/girl2.jpg';
 
 class New extends React.Component {
   state = {
