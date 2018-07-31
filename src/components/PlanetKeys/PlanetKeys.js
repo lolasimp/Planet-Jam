@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './PlanetKeys.css';
 
 class PlanetKeys extends React.Component {
+  static propTypes = {
+    details: PropTypes.object.isRequired,
+  }
 
   state = {
     isPlayed:false,
@@ -24,7 +28,6 @@ class PlanetKeys extends React.Component {
       this.setState({isPlayed: false})
     document.querySelector(`audio.${e.target.id}`).pause();
     }
-    console.log(e.target.id);
   }
 
   render() {

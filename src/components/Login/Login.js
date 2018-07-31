@@ -8,8 +8,8 @@ import './Login.css';
 class Login extends React.Component {
   state = {
     user: {
-      email: 'lolalsimp@gmail.com',
-      password: '123456',
+      email: '',
+      password: '',
     },
   };
 
