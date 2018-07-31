@@ -32,8 +32,8 @@ class PlanetKeys extends React.Component {
 
   render() {
     const {details} = this.props;
-    const imagePath = require(`./images/${details.imgUrl}`);
-    const sounds = require(`./sounds/${details.soundUrl}`);
+    const imagePath = require(`../../assets/images/${details.imgUrl}`);
+    const sounds = require(`../../assets/sounds/${details.soundUrl}`);
 
     return (
       <li>

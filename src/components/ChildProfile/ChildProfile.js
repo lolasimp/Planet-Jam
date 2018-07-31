@@ -12,7 +12,7 @@ class ChildProfile extends React.Component {
 
   render() {
     const details = this.props.details;
-    const imagePath = require(`./avatar/${details.avatarUrl}`);
+    const imagePath = require(`../../assets/avatar/${details.avatarUrl}`);
     return (
       <li>
       <div className="planet-container col-xs-4">

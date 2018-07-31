@@ -65,7 +65,7 @@ class SavedPlanets extends React.Component {
       const selectedPlanet = planets.find(x => x.id === savedPlanet.planetId);
       if (selectedPlanet) {
         const savedImagePath = require(`../../assets/images/${selectedPlanet.imgUrl}`);
-        const planetSounds = require(`./sounds/${selectedPlanet.soundUrl}`);
+        const planetSounds = require(`../../assets/sounds/${selectedPlanet.soundUrl}`);
 
         return (
           <div className="planet-container col-xs-4" key={savedPlanet.id}>
