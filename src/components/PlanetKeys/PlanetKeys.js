@@ -7,10 +7,10 @@ class PlanetKeys extends React.Component {
   state = {
     isPlayed:false,
   }
+
   saveOrder= () => {
     this.props.saveNewOrder();
   }
-
 
   saveNewPlanetEvent = () => {
     this.props.addToMyPlanets(this.props.details);
@@ -24,15 +24,12 @@ class PlanetKeys extends React.Component {
       this.setState({isPlayed: false})
     document.querySelector(`audio.${e.target.id}`).pause();
     }
-    console.error(document.querySelector(`audio.${e.target.id}`));
-    }
-
-
+    console.log(e.target.id);
+  }
 
   render() {
     const {details} = this.props;
     const imagePath = require(`./images/${details.imgUrl}`);
-    // const earth = require(`./sounds/Mars.mp3`);
     const sounds = require(`./sounds/${details.soundUrl}`);
 
     return (

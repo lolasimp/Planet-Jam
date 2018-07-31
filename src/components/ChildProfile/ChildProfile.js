@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import childRequest from '../../firebaseRequests/children';
-// import firebase from 'firebase';
-// import myPlanet from '../../firebaseRequests/savedPlanets';
-
 
 import './ChildProfile.css';
 
 class ChildProfile extends React.Component {
-
 
   childInputNameChangeEvent = (e, id) => {
     e.preventDefault();
@@ -35,6 +30,5 @@ class ChildProfile extends React.Component {
     );
   };
 }
-
 
 export default ChildProfile;

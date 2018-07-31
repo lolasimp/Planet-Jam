@@ -6,7 +6,6 @@ import planetRequest from '../../firebaseRequests/planets';
 
 import './AllPlanets.css';
 
-
 class AllPlanets extends React.Component {
   state = {
     planets: [],
@@ -27,8 +26,6 @@ class AllPlanets extends React.Component {
     })
   }
 
-
-
   componentDidMount() {
     planetRequest
       .getPlanets()
@@ -41,6 +38,7 @@ class AllPlanets extends React.Component {
   }
 
   render() {
+    const childId = this.props.match.params.childId;
     const allPlanetComponents = this.state.planets.map((planet) => {
       return (
         <Fragment key={planet.id}>
@@ -58,7 +56,7 @@ class AllPlanets extends React.Component {
         <ul>
           {allPlanetComponents}
         </ul>
-        <button><Link to={`/child/:childId/savedPlanets`}>See All Saved Planets</Link></button>
+        <button><Link to={`/child/${childId}/savedPlanets`}>See All Saved Planets</Link></button>
       </div>
     );
   }

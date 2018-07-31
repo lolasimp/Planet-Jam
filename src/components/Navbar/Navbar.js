@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import auth from '../../firebaseRequests/auth';
-
-// import PropTypes from 'prop-types';
 
 import './Navbar.css';
 
