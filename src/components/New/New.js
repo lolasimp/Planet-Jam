@@ -4,10 +4,12 @@ import authRequest from '../../firebaseRequests/auth';
 import childrenRequest from '../../firebaseRequests/children';
 
 import './New.css';
-import boy1 from '../../assets/avatar/boy1.jpeg';
-import boy2 from '../../assets/avatar/boy2.jpeg';
-import girl1 from '../../assets/avatar/girl1.jpeg';
-import girl2 from '../../assets/avatar/girl2.jpg';
+import boy1 from '../../assets/avatar/boy1.png';
+import boy2 from '../../assets/avatar/boy2.png';
+import boy3 from '../../assets/avatar/boy3.png';
+import girl1 from '../../assets/avatar/girl1.png';
+import girl2 from '../../assets/avatar/girl2.png';
+
 
 class New extends React.Component {
   state = {
@@ -42,16 +44,19 @@ class New extends React.Component {
 
   render () {
     return (
-      <div className="New">
-        <input onChange={this.nameInput}type="text" />
-          <input onChange={this.chooseAvatar} type="radio" value="boy1.jpeg" name="Avatar" />
-          <img src={boy1} alt="" />
-          <input onChange={this.chooseAvatar} type="radio" value="boy2.jpeg" name="Avatar" />
-          <img src={boy2} alt="" />
-          <input onChange={this.chooseAvatar} type="radio" value="girl1.jpeg" name="Avatar" />
-          <img src={girl1} alt="" />
-          <input onChange={this.chooseAvatar} type="radio" value="girl2.jpg" name="Avatar" />
-          <img src={girl2} alt="" />
+      <div className="New text-center">
+      <h1 className="avatar-title">Choose Your Avatar</h1>
+        <input className="text-box" onChange={this.nameInput}type="text" />
+          <input onChange={this.chooseAvatar} type="radio" value="boy1.png" name="Avatar" />
+          <img className="child-pic" src={boy1} alt="" />
+          <input onChange={this.chooseAvatar} type="radio" value="boy2.png" name="Avatar" />
+          <img className="child-pic" src={boy2} alt="" />
+          <input onChange={this.chooseAvatar} type="radio" value="boy3.png" name="Avatar" />
+          <img className="child-pic" src={boy3} alt="" />
+          <input onChange={this.chooseAvatar} type="radio" value="girl1.png" name="Avatar" />
+          <img className="child-pic" src={girl1} alt="" />
+          <input onChange={this.chooseAvatar} type="radio" value="girl2.png" name="Avatar" />
+          <img className="child-pic" src={girl2} alt="" />
           <button className="saveMe btn btn-success " onClick={this.postChild}>Save</button>
         </div>
     );
