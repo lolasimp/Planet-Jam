@@ -1,22 +1,27 @@
 {
   "child0":{
     "name":"Tom",
-    "avatarUrl":"girl1.jpeg",
+    "avatarUrl":"girl1.png",
     "parentUid":5555
   },
   "child1":{
     "name":"Ashley",
-    "avatarUrl":"girl2.jpg",
+    "avatarUrl":"girl2.png",
     "parentUid":6638768248
   },
   "child2":{
     "name":"Steve",
-    "avatarUrl":"boy1.jpeg",
+    "avatarUrl":"boy1.png",
     "parentUid":"wZLIxjSfHyQowunG7y03vSX4wbx2"
   },
   "child3":{
     "name":"Bianca",
-    "avatarUrl":"boy2.jpeg",
+    "avatarUrl":"boy2.png",
+    "parentUid": "wZLIxjSfHyQowunG7y03vSX4wbx2"
+  },
+  "child4":{
+    "name":"Bianca",
+    "avatarUrl":"boy3.png",
     "parentUid": "wZLIxjSfHyQowunG7y03vSX4wbx2"
   }
 }
