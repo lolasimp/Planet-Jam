@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import myPlanet from '../../firebaseRequests/savedPlanets';
 import allPlanets from '../../firebaseRequests/planets';
 
+import deleteThis from '../../assets/images/delete.png';
+
 import './SavedPlanets.css';
 
 class SavedPlanets extends React.Component {
@@ -74,7 +76,8 @@ class SavedPlanets extends React.Component {
        <audio className={savedPlanet.id}>
        <source src={planetSounds}/>
        </audio>
-            <button className="btn btn-danger" id={savedPlanet.id} onClick={this.deletePlanetClick}>Delete Me</button>
+            {/* <button className="btn btn-danger" id={savedPlanet.id} onClick={this.deletePlanetClick}>Delete Me</button> */}
+            <img src={deleteThis} alt={savedPlanet.name} id={savedPlanet.id} onClick={this.deletePlanetClick}/>
           </div>
         );
       }

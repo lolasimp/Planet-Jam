@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import save from '../../assets/images/save.png';
+
 import './PlanetKeys.css';
 
 class PlanetKeys extends React.Component {
@@ -43,7 +45,8 @@ class PlanetKeys extends React.Component {
        <audio className={details.id}>
        <source src={sounds}/>
        </audio>
-       <button className="btn btn-success" onClick={this.saveNewPlanetEvent}>Save My Planet</button>
+       {/* <button className="btn btn-success" onClick={this.saveNewPlanetEvent}>Save My Planet</button> */}
+       <img src={save} alt={details.name} id={details.id} onClick={this.saveNewPlanetEvent}/>
       </div>
       </li>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../../firebaseRequests/auth';
-import spaceman from '../../assets/images/radio-astro.png';
+import home from '../../assets/images/homeLabel.png';
 
 import './Navbar.css';
 
@@ -25,7 +25,7 @@ class Navbar extends React.Component {
                 <span className="icon-bar"></span>
               </button>
               <a className="navbar-brand" href="/">
-              <img className="brand-image" src={spaceman} alt="Planet Jam" />
+              <img className="brand-image" src={home} alt="Planet Jam" />
               </a>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
