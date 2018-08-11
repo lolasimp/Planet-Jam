@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import deleteThis from '../../assets/images/delete.png';
+
 import './ChildProfile.css';
 
 class ChildProfile extends React.Component {
@@ -17,14 +19,13 @@ class ChildProfile extends React.Component {
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
+        <Link to=
+          {`/child/${this.props.id}/savedPlanets`}><img className="child-dashpic" src={imagePath} alt={details.avatarUrl} /></Link>
         <div className="child-edit">
-        <input type="text" placeholder="Edit" onChange={(event) => this.childInputNameChangeEvent(event, details.id)}/>
-        <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Update</button>
+        <input type="text" placeholder="Type Name Here" onChange={(event) => this.childInputNameChangeEvent(event, details.id)}/>
+        <button className="btn btn-success" id={details.id} onClick={this.props.updateCurrentChild}>Change Name</button>
         </div>
-          <Link to=
-          {`/child/${this.props.id}/savedPlanets`}><img className="child-pic" src={imagePath} alt={details.avatarUrl} /></Link>
-        <button className="btn btn-danger" id={details.id} onClick={this.props.deleteChild}>Delete</button>
-
+        <img src={deleteThis} alt={details.name} id={details.id} onClick={this.props.deleteChild}/>
       </div>
       </li>
     );

@@ -86,10 +86,10 @@ class Dashboard extends React.Component {
     });
     return (
       <div>
+        <button><Link className="child-profile" to="/new/child">Create New Child Profile</Link></button>
         <ul>
           {dashComponents}
         </ul>
-        <button><Link to="/new/child">Create New Child Profile</Link></button>
       </div>
     );
   }
