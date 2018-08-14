@@ -10,9 +10,10 @@
   position: relative;
   display: block;
   overflow: hidden;
-  // @include size(100%, height);
-  // max-width: $btn-width;
   margin: 1rem auto;
-  // text-transform: uppercase;
-  // border: 1px solid currentColor;
+}
+
+.planet-pic:hover {
+// background-color: #00c50847;
+opacity: .5;
 }

@@ -3,6 +3,42 @@
 }
 
 .child-pic {
-  height: 34%;
-  width: 26%;
+  background-color: black;
+  border-radius: 26%;
+  height: 218px;
+  width: 216px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.btn-success {
+  height: 66px;
+  margin-bottom: 20px;
+  width: 245px;
+}
+
+.avatar-title {
+  font-size: 110px;
+  padding-bottom: 44px;
+  color: white;
+}
+
+.child-ava {
+margin: 19px;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  margin-left: 156px;
+}
+
+input[type="text"] {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.arrow:hover{
+  opacity: .3;
 }
