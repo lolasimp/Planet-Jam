@@ -51,34 +51,34 @@ class New extends React.Component {
         {/* <input className="text-box" onChange={this.nameInput} type="text" placeholder="Enter Name Here" /> */}
         <div className="row">
           <div className="child-ava col-md-2 ">
-          <img className="arrow" src={select} alt=""/>
+            <img className="arrow" src={select} alt="" />
             <input onChange={this.chooseAvatar} type="radio" value="boy1.png" name="Avatar" />
             <img className="child-pic" src={boy1} alt="" />
           </div>
           <div className="child-ava col-md-2">
-          <img className="arrow" src={select} alt=""/>
+            <img className="arrow" src={select} alt="" />
             <input onChange={this.chooseAvatar} type="radio" value="boy2.png" name="Avatar" />
             <img className="child-pic" src={boy2} alt="" />
           </div>
           <div className="child-ava col-md-2">
-          <img className="arrow" src={select} alt=""/>
+            <img className="arrow" src={select} alt="" />
             <input onChange={this.chooseAvatar} type="radio" value="boy3.png" name="Avatar" />
             <img className="child-pic" src={boy3} alt="" />
           </div>
           <div className="child-ava col-md-2">
-          <img className="arrow" src={select} alt=""/>
+            <img className="arrow" src={select} alt="" />
             <input onChange={this.chooseAvatar} type="radio" value="girl1.png" name="Avatar" />
             <img className="child-pic" src={girl1} alt="" />
           </div>
           <div className="child-ava col-md-2">
-          <img className="arrow" src={select} alt=""/>
+            <img className="arrow" src={select} alt="" />
             <input onChange={this.chooseAvatar} type="radio" value="girl2.png" name="Avatar" />
             <img className="child-pic" src={girl2} alt="" />
           </div>
           <h3 className="avatar-title">Add Name Here</h3>
-        </div>
           <input className="text-box" onChange={this.nameInput} type="text" placeholder="Enter Name Here" />
-          <img src={saveArrow} alt=""/>
+        </div>
+        <img className="arrow" src={saveArrow} alt="" />
         <button className="saveMe btn btn-success col-md-12" onClick={this.postChild}>Save</button>
       </div>
     );

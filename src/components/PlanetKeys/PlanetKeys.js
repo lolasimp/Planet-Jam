@@ -41,11 +41,14 @@ class PlanetKeys extends React.Component {
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
+        <div className="img__wrap">
        <img className="planet-pic" src={imagePath} alt={details.name} onClick={this.playSoundEvent} id={details.id}/>
+       <p className="img__description">This image looks super neat.</p>
+       </div>
        <audio className={details.id}>
        <source src={sounds}/>
        </audio>
-       <img src={save} alt={details.name} id={details.id} onClick={this.saveNewPlanetEvent}/>
+       <img className="row saveButton" src={save} alt={details.name} id={details.id} onClick={this.saveNewPlanetEvent}/>
       </div>
       </li>
     );
