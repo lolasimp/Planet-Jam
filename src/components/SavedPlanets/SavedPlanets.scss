@@ -1,3 +1,26 @@
-.SavedPlanets {
-  background-color: limegreen;
+.SavedPlanets
+{
+  margin: 0;
+  padding: 0;
+  background-image:
+  url("https://img.culturacolectiva.com/featured_image/2017/12/12/1513089206998/music-space-1_opt.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -20px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: -135px;
+  background-size: 100%;
+  font-family: 'Gaegu', cursive;
+}
+
+.planetName{
+  color:white;
+  background-color:#3a22281c;
+  font-size: 65px;
+  font-weight: bolder;
 }

@@ -86,7 +86,7 @@ class SavedPlanets extends React.Component {
     // }
 
     return (
-      <div className="savedAugust col-xs-12">
+      <div className="SavedPlanets">
         <h1>Saved Planets</h1>
         <button><Link to={`/child/${childId}/allplanets`}>See All Planets</Link></button>
         <ul className="savedPlanets">

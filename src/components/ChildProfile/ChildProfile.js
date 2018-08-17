@@ -18,7 +18,7 @@ class ChildProfile extends React.Component {
     return (
       <li>
       <div className="planet-container col-xs-4">
-        <h2 className="planetName">{details.name}</h2>
+        <h2 className="childName">{details.name}</h2>
         <Link to=
           {`/child/${this.props.id}/savedPlanets`}><img className="child-dashpic" src={imagePath} alt={details.avatarUrl} /></Link>
         <div className="child-edit">

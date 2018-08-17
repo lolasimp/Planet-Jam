@@ -52,11 +52,11 @@ class AllPlanets extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="AllPlanets">
+      <button><Link to={`/child/${childId}/savedPlanets`}>See All Saved Planets</Link></button>
         <ul>
           {allPlanetComponents}
         </ul>
-        <button><Link to={`/child/${childId}/savedPlanets`}>See All Saved Planets</Link></button>
       </div>
     );
   }
