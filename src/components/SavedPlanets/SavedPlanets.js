@@ -4,6 +4,7 @@ import myPlanet from '../../firebaseRequests/savedPlanets';
 import allPlanets from '../../firebaseRequests/planets';
 
 import deleteThis from '../../assets/images/delete.png';
+import all from '../../assets/images/see-all.png';
 
 import './SavedPlanets.css';
 
@@ -76,7 +77,6 @@ class SavedPlanets extends React.Component {
        <audio className={savedPlanet.id}>
        <source src={planetSounds}/>
        </audio>
-            {/* <button className="btn btn-danger" id={savedPlanet.id} onClick={this.deletePlanetClick}>Delete Me</button> */}
             <img src={deleteThis} alt={savedPlanet.name} id={savedPlanet.id} onClick={this.deletePlanetClick}/>
           </div>
         );
@@ -87,8 +87,9 @@ class SavedPlanets extends React.Component {
 
     return (
       <div className="SavedPlanets">
-        <h1>Saved Planets</h1>
-        <button><Link to={`/child/${childId}/allplanets`}>See All Planets</Link></button>
+        <h1 className="seeAll">Click Image to See All Planets</h1>
+        <button className="btn-all"><Link to={`/child/${childId}/allplanets`}><img className="toAll"src={all} alt=""/></Link></button>
+        <h1 className="seeSaved">My Saved Planets</h1>
         <ul className="savedPlanets">
           {savedPlanetComponents}
         </ul>

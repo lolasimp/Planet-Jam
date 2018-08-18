@@ -48,7 +48,6 @@ class New extends React.Component {
     return (
       <div className="New col-md-12 text-center">
         <h1 className="avatar-title">Choose Your Avatar</h1>
-        {/* <input className="text-box" onChange={this.nameInput} type="text" placeholder="Enter Name Here" /> */}
         <div className="row">
           <div className="child-ava col-md-2 ">
             <img className="arrow" src={select} alt="" />
@@ -78,8 +77,8 @@ class New extends React.Component {
           <h3 className="avatar-title">Add Name Here</h3>
           <input className="text-box" onChange={this.nameInput} type="text" placeholder="Enter Name Here" />
         </div>
-        <img className="arrow" src={saveArrow} alt="" />
-        <button className="saveMe btn btn-success col-md-12" onClick={this.postChild}>Save</button>
+        <img className="arrows col-md-12" src={saveArrow} alt="" />
+        <button className="saveMe btn btn-success col-xs-6 col-md-4" onClick={this.postChild}>Save</button>
       </div>
     );
   }

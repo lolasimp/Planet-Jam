@@ -41,6 +41,15 @@ class PlanetKeys extends React.Component {
       <li>
       <div className="planet-container col-xs-4">
         <h2 className="planetName">{details.name}</h2>
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Planet Info</button>
+
+<div className="modal fade bs-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div className="modal-dialog modal-sm" role="document">
+    <div className="modal-content">
+    <h2>Hello</h2>
+    </div>
+  </div>
+</div>
         <div className=" img__wrap">
        <img className="planet-pic" src={imagePath} alt={details.name} onClick={this.playSoundEvent} id={details.id}/>
        </div>

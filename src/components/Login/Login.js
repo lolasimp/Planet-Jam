@@ -8,8 +8,8 @@ import './Login.css';
 class Login extends React.Component {
   state = {
     user: {
-      email: '',
-      password: '',
+      email: 'lolalsimp@gmail.com',
+      password: '123456',
     },
   };
 
@@ -43,10 +43,10 @@ class Login extends React.Component {
     return (
       <div className="Login">
         <div id="login-form">
-          <h1 className="text-center">Login</h1>
+          <h1 className="text-center login">Login</h1>
           <form className="form-horizontal col-sm-6 col-sm-offset-3">
             <div className="form-group">
-              <label htmlFor="inputEmail" className="col-sm-4 control-label">
+              <label htmlFor="inputEmail" className=" email col-sm-4 control-label">
                 Email:
               </label>
               <div className="col-sm-8">
@@ -61,7 +61,7 @@ class Login extends React.Component {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="inputPassword" className="col-sm-4 control-label">
+              <label htmlFor="inputPassword" className=" password col-sm-4 control-label">
                 Password:
               </label>
               <div className="col-sm-8">

@@ -13,6 +13,7 @@ class Home extends React.Component {
       <div>
       <h2 className="title col-xs-12">Planet Jam</h2>
       <div className="youtube">
+      <h2>Learn about Planet Sounds with this Video</h2>
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BpgPXZh1WEQ"
       frameBorder="0" allow="autoplay; encrypted-media"
       allowFullScreen></iframe>

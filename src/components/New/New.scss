@@ -26,28 +26,28 @@
   margin: 20px;
 }
 
-// .btn-success {
-//   height: 66px;
-//   margin-bottom: 20px;
-//   width: 245px;
-// }
+.saveMe{
+  margin-left: 483px;
+  margin-bottom: 36px;
+  padding: 2px;
+  font-size: 65px;
+}
 
 .avatar-title {
-  font-size: 110px;
-  padding-bottom: 44px;
+  font-size: 101px;
+  padding-bottom: 9px;
   color: white;
 }
 
 .child-ava {
 margin: 19px;
-// cursor: pointer;
 }
 
 input[type="radio"] {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
-  margin-left: 156px;
+  margin-left: 128px;
 }
 
 input[type="text"] {
@@ -57,4 +57,10 @@ input[type="text"] {
 
 .arrow:hover{
   opacity: .3;
+}
+
+
+.arrows{
+  width: 17%;
+  margin-left: 599px;
 }

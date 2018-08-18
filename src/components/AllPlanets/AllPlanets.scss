@@ -21,7 +21,9 @@
   color: white;
 }
 
-.planet-pic {
+.planet-pic:hover {
   max-height: 120px;
   max-width: 128px;
+  // opacity: .3;
+  transform: perspective(600px) rotateZ(160deg);
 }
