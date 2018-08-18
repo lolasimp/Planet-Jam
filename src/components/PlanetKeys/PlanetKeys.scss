@@ -28,30 +28,19 @@
   margin: 1rem auto;
 }
 
-// .planet-pic:hover {
-// // background-color: #00c50847;
-// opacity: .5;
-// }
-
-// .img__description {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   background: black;
-//   color: #fff;
-//   visibility: hidden;
-//   opacity: 0;
-//   border-radius: 58%;
-
-//   transition: opacity .2s, visibility .2s;
-// }
-
-// .img__wrap:hover .img__description {
-//   visibility: visible;
-//   opacity: 1;
-// }
 .saveButton {
   width: 200px;
+}
+
+.modal-content {
+  background-color:#0000ffb5;
+  p{
+    color: white;
+    font-family: 'Gaegu', cursive;
+    font-weight: bold;
+  }
+  h4{
+    color: white;
+    font-family: 'Gaegu', cursive;
+  }
 }
