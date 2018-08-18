@@ -4,6 +4,8 @@ import ChildProfile from '../../components/ChildProfile/ChildProfile';
 import firebase from 'firebase';
 import childRequest from '../../firebaseRequests/children';
 
+import newChild from '../../assets/images/create-new.png';
+
 import './Dashboard.css';
 
 
@@ -85,8 +87,9 @@ class Dashboard extends React.Component {
       );
     });
     return (
-      <div>
-        <button><Link className="child-profile" to="/new/child">Create New Child Profile</Link></button>
+      <div className="Dashboard">
+      <h2 className="addNew">CLick to Add New Profile</h2>
+        <button className="newChild"><Link className="child-profile" to="/new/child"><img className="createChild" src={newChild} alt=""/></Link></button>
         <ul>
           {dashComponents}
         </ul>

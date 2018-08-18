@@ -1,5 +1,20 @@
-.AllPlanets {
-  background-color: transparent;
+.PlanetKeys {
+  margin: 0;
+  padding: 0;
+  background-image:
+  url("https://img.culturacolectiva.com/featured_image/2017/12/12/1513089206998/music-space-1_opt.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -20px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: -135px;
+  background-size: 100%;
+  font-family: 'Gaegu', cursive;
 }
 .planetName {
   color: white;
@@ -10,9 +25,33 @@
   position: relative;
   display: block;
   overflow: hidden;
-  // @include size(100%, height);
-  // max-width: $btn-width;
   margin: 1rem auto;
-  // text-transform: uppercase;
-  // border: 1px solid currentColor;
+}
+
+// .planet-pic:hover {
+// // background-color: #00c50847;
+// opacity: .5;
+// }
+
+// .img__description {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   background: black;
+//   color: #fff;
+//   visibility: hidden;
+//   opacity: 0;
+//   border-radius: 58%;
+
+//   transition: opacity .2s, visibility .2s;
+// }
+
+// .img__wrap:hover .img__description {
+//   visibility: visible;
+//   opacity: 1;
+// }
+.saveButton {
+  width: 200px;
 }

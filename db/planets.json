@@ -2,7 +2,8 @@
   "planet0": {
     "name":"Saturn",
     "imgUrl":"Saturn.png",
-    "soundUrl": "Saturn.mp3"
+    "soundUrl": "Saturn.mp3",
+    "funfact": "The electromagnetic vibrations come from the rings of Saturn."
   },
   "planet1": {
     "name": "Mars",

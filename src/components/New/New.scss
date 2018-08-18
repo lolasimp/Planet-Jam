@@ -1,8 +1,66 @@
 .New {
-  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  background-image:
+  url("https://img.culturacolectiva.com/featured_image/2017/12/12/1513089206998/music-space-1_opt.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -20px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: -135px;
+  background-size: 100%;
+  font-family: 'Gaegu', cursive;
 }
 
 .child-pic {
-  height: 34%;
-  width: 26%;
+  background-color: black;
+  border-radius: 26%;
+  height: 218px;
+  width: 216px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.saveMe{
+  margin-left: 483px;
+  margin-bottom: 36px;
+  padding: 2px;
+  font-size: 65px;
+}
+
+.avatar-title {
+  font-size: 101px;
+  padding-bottom: 9px;
+  color: white;
+}
+
+.child-ava {
+margin: 19px;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  margin-left: 128px;
+}
+
+input[type="text"] {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.arrow:hover{
+  opacity: .3;
+}
+
+
+.arrows{
+  width: 17%;
+  margin-left: 599px;
 }
