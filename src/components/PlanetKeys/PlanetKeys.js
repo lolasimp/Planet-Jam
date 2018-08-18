@@ -64,7 +64,7 @@ class PlanetKeys extends React.Component {
         <h2 className="planetName">{details.name}</h2>
       <div>
         <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
-          Launch demo modal
+          Planet Info
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
